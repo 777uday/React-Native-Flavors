@@ -127,13 +127,11 @@ android {
             applicationId 'com.busdue.Tank'
             versionCode 1
             versionName "1.0"
-            buildConfigField "String",  "flavor", '"Tank"'
         }
         Silo {
             applicationId 'com.busdue.Silo'
             versionCode 1
             versionName "1.0"
-            buildConfigField "String",  "flavor", '"Silo"'
         }
     }
 

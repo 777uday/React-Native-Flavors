@@ -25,7 +25,9 @@ const instructions = Platform.select({
 export default class App extends Component{
   constructor(props){
     super();
-    this.state = {};
+    this.state = {
+      currentFlavor:'def'
+    };
   }
 
   componentWillMount(){
@@ -34,7 +36,7 @@ export default class App extends Component{
       Alert.alert("app.js:"+uday);
       console.log("app.js:flavor:"+JSON.stringify(flavor));
       Alert.alert("app.js:flavor:"+JSON.stringify(flavor));
-      this.setState({isInitialised:true});
+      this.setState({isInitialised:true, currentFlavor:uday.FLAVOR});
     });
   }
 
@@ -43,7 +45,7 @@ export default class App extends Component{
       return (
         <View style={styles.container}>
           <Text style={styles.welcome}>
-            Welcome to React Native!
+            Welcome to React Native!{this.state.currentFlavor}
           </Text>
           <Text style={styles.instructions}>
             To get started, edit App.js

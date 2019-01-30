@@ -39,7 +39,7 @@ var flavor = {
     }
     function isLite() {
         if (isAndroid) {
-            if (targetAndroid === "Tank") {
+            if (BuildConfig.FLAVOR === "Tank") {
                 flavor.Tank = true;
             }
         } else {
@@ -51,7 +51,7 @@ var flavor = {
     
     function isPro() {
         if (isAndroid) {
-            if (targetAndroid === "Silo") {
+            if (BuildConfig.FLAVOR === "Silo") {
                 flavor.Silo = true;
             }
         } else {
